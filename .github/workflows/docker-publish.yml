@@ -31,9 +31,9 @@ jobs:
         id: set
         run: |
           if [ "${{ github.ref_name }}" = "main" ]; then
-            echo "image_name=ghcr.io/${{ github.repository }}-beta" >> $GITHUB_OUTPUT
+            echo "image_name=ghcr.io/w1ndchaser-a/webmail-beta" >> $GITHUB_OUTPUT
           else
-            echo "image_name=ghcr.io/${{ github.repository }}-${{ github.ref_name }}" >> $GITHUB_OUTPUT
+            echo "image_name=ghcr.io/w1ndchaser-a/webmail-${{ github.ref_name }}" >> $GITHUB_OUTPUT
           fi
 
   build:
